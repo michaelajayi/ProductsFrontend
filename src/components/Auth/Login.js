@@ -33,7 +33,6 @@ const Login = (props) => {
       if (res.success === true) {
         localStorage.setItem("token", JSON.stringify(res));
         history.push("/");
-        history.push("/");
       } else {
         localStorage.removeItem("token");
       }

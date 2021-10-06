@@ -1,6 +1,6 @@
 import React, { useState, useContext, useRef } from "react";
-import { useHistory } from 'react-router-dom';
-import ProductContext from '../../../context/product/productContext';
+import { useHistory } from "react-router-dom";
+import ProductContext from "../../../context/product/productContext";
 
 const ProductForm = () => {
   const productContext = useContext(ProductContext);
@@ -25,14 +25,14 @@ const ProductForm = () => {
     };
     addProduct(product);
     clearForm();
-    // history.push('/');
+    history.push("/");
   };
 
   const clearForm = () => {
     setName("");
     setPrice("");
     setDescription("");
-    ref.current.value = ""
+    ref.current.value = "";
   };
 
   return (
